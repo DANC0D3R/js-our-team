@@ -45,7 +45,7 @@ for(let i = 0; i < members.length; i++) {
 // Stampa nella DOM le informazioni contenute in nome, occupazione e nome file foto per ogni membro
 
 for(let i = 0; i < members.length; i++){
-    const h4 = document.createElement('h3');
+    const h4 = document.createElement('h4');
     const section = document.querySelector('section');
 
     h4.innerText = "Membro numero: " + (i + 1);
