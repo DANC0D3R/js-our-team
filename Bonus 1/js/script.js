@@ -54,8 +54,17 @@ for(let i = 0; i < members.length; i++){
     
     for(let key in members[i]){
         const p = document.createElement('p');
-        p.innerText = key + ': ' + members[i][key];
-        section.append(p)
+        if (key == 'img') {
+            p.innerText = key + ':';
+            const img = document.createElement('img');
+            img.setAttribute('src', `img/${members[i][key]}`);
+            section.append(p);
+            section.append(img);
+        }
+        else {
+            p.innerText = key + ': ' + members[i][key];
+            section.append(p);
+        }
     }
     const p = document.createElement('p');
     p.innerText = '―――――――――';
