@@ -41,3 +41,23 @@ for(let i = 0; i < members.length; i++) {
     }
     console.log('―――――――――――――――')
 }
+
+// Stampa nella DOM le informazioni contenute in nome, occupazione e nome file foto per ogni membro
+
+for(let i = 0; i < members.length; i++){
+    const h4 = document.createElement('h3');
+    const section = document.querySelector('section');
+
+    h4.innerText = "Membro numero: " + (i + 1);
+
+    section.append(h4)
+    
+    for(let key in members[i]){
+        const p = document.createElement('p');
+        p.innerText = key + ': ' + members[i][key];
+        section.append(p)
+    }
+    const p = document.createElement('p');
+    p.innerText = '―――――――――';
+    section.append(p);
+}
